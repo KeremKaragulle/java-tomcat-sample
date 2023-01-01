@@ -12,5 +12,12 @@ pipeline {
                 }
             }
         }
+        stage('Deploy to Staging Environment'){
+            steps{
+                build job: 'deploy-application-staging-environment-pipeline'
+
+            }
+            
+        }
     }
 }
